@@ -2,10 +2,10 @@
 
 This is a simple Shewhart chart implementation for univariate statistical process control.
 The current version has the following statistics
-- x-bar
-- S
-- R
-- moving average
+- `x_bar`: x-bar
+- `S`: S
+- `R`: R
+- `ma`: moving average
 More will be added.
 
 A simple usage is as follows.

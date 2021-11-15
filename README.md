@@ -4,7 +4,7 @@ This is a simple Shewhart chart implementation for univariate statistical proces
 The current version has x-bar, S, R, moving average statistics, and more will be added.
 
 A simple usage is as follows.
-```
+```python
 # make a training dataset that is assumed to be in-control
 X = np.random.randn(500)
 # make instance of desired statistics with subsample size (n)

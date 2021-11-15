@@ -1,6 +1,7 @@
 import numpy as np
 import h5py
 from stats import x_bar
+from chplot import ccplot
 
 
 class shewhart_chart:
@@ -63,3 +64,5 @@ if __name__ == '__main__':
     my_chart = shewhart_chart(my_stat, L=3)
     my_chart.fit(X)
     my_chart.run(X_new)
+    ccplot(my_chart, X_new)
+    

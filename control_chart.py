@@ -1,6 +1,6 @@
 import numpy as np
-import pandas as pd
 import h5py
+from stats import x_bar
 
 
 class schewart_chart:
@@ -56,3 +56,10 @@ class schewart_chart:
             return stat_test, ooc_indices
 
 
+if __name__ == '__main__':
+    X = np.random.randn(500)
+    X_new = np.random.normal(0, 1.2, 1000)
+    my_stat = x_bar()
+    my_chart = schewart_chart(my_stat, L=3)
+    my_chart.fit(X)
+    my_chart.run(X_new)

@@ -1,7 +1,12 @@
 # control_chart
 
 This is a simple Shewhart chart implementation for univariate statistical process control.
-The current version has x-bar, S, R, moving average statistics, and more will be added.
+The current version has the following statistics
+- x-bar
+- S
+- R
+- moving average
+More will be added.
 
 A simple usage is as follows.
 ```python
@@ -14,8 +19,11 @@ my_chart = shehart_chart(stat=my_stat, L=3)
 # fit control chart
 my_chart.fit(X)
 # generate new process variables
-X_new = np.random.randn(1000)
+X_new = np.random.normal(0, 1.2, 1000)
 # run control chart
 my_chart.run(X_new)
+# show control chart
+ccplot(my_chart, X_new)
 ```
-
+The resulting control chart is as follows.
+![example](example.png)
